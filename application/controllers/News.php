@@ -15,6 +15,11 @@
         {
 
             $data['news'] = $this->news_model->get_news();
+            $data['title'] = 'News Arcive';
+
+            $this->load->view('templates/header.php', $data);
+            $this->load->view('news/index', $data);
+            $this->load->view('templates/footer');
 
         }
 
